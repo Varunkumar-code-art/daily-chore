@@ -1,0 +1,15 @@
+class Solution {
+    public int countCommas(int n) {
+        int ans = 0;
+
+        for (int i = 1; i <= n; i++) {
+            String s = String.valueOf(i);
+
+            if (s.length() >= 4) {
+                ans += (s.length() - 1) / 3;
+            }
+        }
+
+        return ans;
+    }
+}
